@@ -1,0 +1,17 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: learning_docker
+      MYSQL_USER: learning_docker_user
+      MYSQL_PASSWORD: password
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    volumes:
+      - './mysql:/docker-entrypoint-initdb.d'
+  php-apache:
+    image: php:8.2-apache
+    volumes:
+      - './:/var/www/html'
+    ports:
+      - 1234:80
