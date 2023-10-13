@@ -10,6 +10,8 @@ services:
       MYSQL_TCP_PORT: 1235
     volumes:
       - './mysql:/docker-entrypoint-initdb.d'
+      - "./mysql.sql:/docker-entrypoint-initdb.d/1.sql"
+      - "./data.sql:/docker-entrypoint-initdb.d/2.sql"
     ports:
       - 1235:1235
     expose:
