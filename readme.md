@@ -5,10 +5,8 @@ A repo for learning docker
 ### Setup
 
 ```
-docker-compose build
-docker-composer up
+docker-compose up --build
 composer install
-composer dump-autoload
 ```
 
 ### Ports

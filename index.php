@@ -9,7 +9,7 @@ $dotenv->load(__DIR__.'/.env');
 
 $database = new Database();
 
-echo "<h1>Docker Test</h1>";
+echo "<h1>Learning Docker ⛵️</h1>";
 
 var_dump($database->query('SELECT * FROM test'));
 
