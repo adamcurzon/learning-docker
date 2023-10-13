@@ -22,5 +22,3 @@ services:
       - './:/var/www/html'
     ports:
       - 1234:80
-    build:
-      dockerfile: ./Dockerfile
